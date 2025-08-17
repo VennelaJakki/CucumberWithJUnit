@@ -4,7 +4,7 @@ import com.qa.opencart.pages.*;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.Assert;
+import org.junit.Assert;
 import utils.ScenarioContext;
 
 import java.util.Properties;
@@ -38,7 +38,7 @@ public class EndToEnd {
     @Then("the search result count should be {int}")
     public void validate_search_Result_count(int expProdCount){
         int actProdCount=searchResultsPage.getSearchResultsCount();
-        Assert.assertEquals(actProdCount,expProdCount);
+        Assert.assertEquals(expProdCount,actProdCount);
     }
     @When("the user selects product {string}")
     public void user_selects_product(String productName){
@@ -47,12 +47,12 @@ public class EndToEnd {
     @Then("the product image count should be {int}")
     public void validate_product_image_count(int expImageCount){
        int actImageCount= productInfoPage.getProductImagesCount();
-       Assert.assertEquals(actImageCount,expImageCount);
+       Assert.assertEquals(expImageCount,actImageCount);
     }
     @Then("the selected product header should be {string}")
     public void validate_product_header(String expHeader){
         String actHeader=productInfoPage.getProductHeader();
-        Assert.assertEquals(actHeader,expHeader);
+        Assert.assertEquals(expHeader,actHeader);
     }
     @When("the user adds the product to cart")
     public void the_user_adds_the_product_to_cart(){
@@ -61,7 +61,7 @@ public class EndToEnd {
     }
     @Then("user validates add to cart message {string}")
     public void user_validates_add_to_cart_message(String expMsg){
-        Assert.assertEquals(scenarioContext.getContext("ADD_TO_CART_MSG").toString(), expMsg);
+        Assert.assertEquals(expMsg,scenarioContext.getContext("ADD_TO_CART_MSG").toString());
     }
     @When("user goes to shopping cart page")
     public void user_moves_to_shopping_cart_page(){
@@ -73,11 +73,11 @@ public class EndToEnd {
     }
     @Then("user should see product name as {string}")
     public void user_should_see_product_name(String productName){
-        Assert.assertEquals(cartPage.getProductName(),productName);
+        Assert.assertEquals(productName,cartPage.getProductName());
     }
     @Then("user should see total price as {string}")
     public void user_should_see_total_price(String totalPrice){
-        Assert.assertEquals(cartPage.getTotalCost(),totalPrice);
+        Assert.assertEquals(totalPrice,cartPage.getTotalCost());
     }
 
 

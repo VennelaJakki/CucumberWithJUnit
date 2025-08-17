@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import com.qa.opencart.pages.LoginPage;
-import org.testng.Assert;
+import org.junit.Assert;
 import utils.ScenarioContext;
 
 
@@ -33,7 +33,7 @@ public class LoginPageSteps {
 
     @Then("the page title should be {string}")
     public void the_page_title_should_be(String title) {
-        Assert.assertEquals(scenarioContext.getContext("LOGIN_PAGE_TITLE").toString(), title);
+        Assert.assertEquals(title,scenarioContext.getContext("LOGIN_PAGE_TITLE").toString());
     }
 
     @Then("the page title should not be empty")
@@ -65,7 +65,7 @@ public class LoginPageSteps {
     }
     @Then("the user should be redirected to the accounts page with title {string}")
     public void the_user_should_be_redirected_to_the_accounts_page_with_title(String title){
-        Assert.assertEquals(accPage.getAccPageTitle(), title);
+        Assert.assertEquals(title,accPage.getAccPageTitle());
     }
 
 

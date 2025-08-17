@@ -8,8 +8,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
+import org.junit.Assert;
 import utils.ScenarioContext;
 
 import java.util.List;
@@ -21,13 +20,12 @@ public class AccountsPageSteps{
     private ProductInfoPage productInfoPage;
     private ScenarioContext scenarioContext;
     private Hooks hooks;
-    private SoftAssert softAssert;
+
 
     public AccountsPageSteps(Hooks hooks,ScenarioContext scenarioContext){
         this.hooks=hooks;
         this.loginPage=hooks.getLoginPage();
         this.scenarioContext=scenarioContext;
-        softAssert=new SoftAssert();
     }
 
     @Given("the user is logged in and on the accounts page")
@@ -43,7 +41,7 @@ public class AccountsPageSteps{
 
     @Then("the page headers should be:")
     public void the_page_headers_should_be(DataTable headers){
-        Assert.assertEquals(List.of(scenarioContext.getContext("ACC_PAGE_HEADERS")),headers.asList());
+        Assert.assertEquals(headers.asList(),List.of(scenarioContext.getContext("ACC_PAGE_HEADERS")));
 
     }
 
@@ -53,7 +51,7 @@ public class AccountsPageSteps{
     }
     @Then("the result count should be {int}")
     public void the_result_count_should_be(int resultCount){
-        Assert.assertEquals(searchResultsPage.getSearchResultsCount(),resultCount);
+        Assert.assertEquals(resultCount,searchResultsPage.getSearchResultsCount());
     }
     @When("the user selects the product {string}")
     public void the_user_selects_the_product(String productName){
@@ -66,25 +64,24 @@ public class AccountsPageSteps{
 
     @Then("the product header should be {string}")
     public void the_product_header_should_be(String header) {
-       softAssert.assertEquals(productInfoPage.getProductHeader(),header);
+       Assert.assertEquals(header,productInfoPage.getProductHeader());
     }
     @Then("the product code should be {string}")
     public void the_product_code_should_be(String productCode) {
-        softAssert.assertEquals(productInfoPage.getProductInfoMap().get("Product Code"),productCode);
+        Assert.assertEquals(productCode,productInfoPage.getProductInfoMap().get("Product Code"));
     }
     @Then("the availability should be {string}")
     public void the_availability_should_be(String availability) {
-        softAssert.assertEquals(productInfoPage.getProductInfoMap().get("Availability"),availability);
+        Assert.assertEquals(availability,productInfoPage.getProductInfoMap().get("Availability"));
     }
     @Then("the price should be {string}")
     public void the_price_should_be(String price){
-        softAssert.assertEquals(productInfoPage.getProductInfoMap().get("productPrice"),price);
+        Assert.assertEquals(price,productInfoPage.getProductInfoMap().get("productPrice"));
     }
 
     @Then("the ExTax should be {string}")
     public void the_ex_tax_should_be(String exTax) {
-        softAssert.assertEquals(productInfoPage.getProductInfoMap().get("exTaxPrice"),exTax);
-        softAssert.assertAll();
+        Assert.assertEquals(exTax,productInfoPage.getProductInfoMap().get("exTaxPrice"));
     }
 
 
