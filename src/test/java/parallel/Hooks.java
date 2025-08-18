@@ -33,20 +33,16 @@ public class Hooks {
         driver = df.initDriver(prop);
         loginPage = new LoginPage(driver);
     }
-//    @AfterStep
-//    public void takeScreenshot(Scenario scenario){
-//        if(scenario.isFailed()){
-//            byte[] screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-//            scenario.attach(screenshot, "image/png", scenario.getName());
-//        }
-//    }
-
-    @After
-    public  void tearDown(Scenario scenario) {
+    @AfterStep
+    public void takeScreenshot(Scenario scenario){
         if(scenario.isFailed()){
             byte[] screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
+    }
+
+    @After
+    public  void tearDown() {
         if (driver != null) {
             driver.quit();
         }
