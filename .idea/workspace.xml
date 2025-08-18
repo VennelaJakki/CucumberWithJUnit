@@ -11,16 +11,20 @@
       <change afterPath="$PROJECT_DIR$/../Cucumber0825/.mvn/maven.config" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Cucumber0825/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile_sample" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile_sample" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/opencart/listeners/AnnotationTransformer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/opencart/listeners/Retry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/opencart/listeners/TestAllureListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/AccountsPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/AccountsPageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/EndToEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/EndToEnd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/JUnitTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/JUnitTestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/LoginPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/LoginPageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/RegisterPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/RegisterPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/AccountsPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/AccountsPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/EndToEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/EndToEnd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/JUnitTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/JUnitTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/LoginPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/LoginPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/RegisterPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/RegisterPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/SearchResultsPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/SearchResultsPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/AccountsPage.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/parallel/AccountsPage.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/EndToEnd.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/parallel/EndToEnd.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/LoginPage.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/parallel/LoginPage.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/RegisterPage.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/parallel/RegisterPage.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +34,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="31NSYsem6KLrhZnuEcNJu2PhBAF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -40,6 +44,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Cucumber Java.Scenario: Check login page title.executor": "Run",
+    "Cucumber Java.Scenario: Registering a new user <firstName> with valid data - @register, @... - Example n°1.executor": "Run",
+    "Cucumber Java.Scenario: Verify the headers on the accounts page.executor": "Debug",
     "JUnit.JUnitTestRunner.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -55,18 +62,81 @@
       <recent name="C:\Users\Vennela Priyanka\Desktop\CucumberWithJunit\src\main" />
       <recent name="C:\Users\Vennela Priyanka\Desktop\CucumberWithJunit" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="steps" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Verify the headers on the accounts page">
+    <configuration name="Scenario: Check login page title" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/parallel/LoginPage.feature" />
+      <option name="GLUE" value="parallel" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="CucumberWithJunit" />
+      <option name="NAME_FILTER" value="^Check login page title$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Check login page title$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Check login page title" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Registering a new user &lt;firstName&gt; with valid data - @register, @... - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/parallel/RegisterPage.feature:13" />
+      <option name="GLUE" value="parallel" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="CucumberWithJunit" />
+      <option name="NAME_FILTER" value="^Registering a new user .* with valid data$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Registering a new user .* with valid data$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Registering a new user &lt;firstName&gt; with valid data - @register, @... - Example n°1" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Verify the headers on the accounts page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/parallel/AccountsPage.feature" />
+      <option name="GLUE" value="parallel" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="CucumberWithJunit" />
+      <option name="NAME_FILTER" value="^Verify the headers on the accounts page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify the headers on the accounts page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify the headers on the accounts page" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JUnitTestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CucumberWithJunit" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="steps.*" />
+          <option name="PATTERN" value="parallel.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="steps" />
-      <option name="MAIN_CLASS_NAME" value="steps.JUnitTestRunner" />
+      <option name="MAIN_CLASS_NAME" value="parallel.JUnitTestRunner" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -74,6 +144,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Verify the headers on the accounts page" />
+        <item itemvalue="Cucumber Java.Scenario: Check login page title" />
+        <item itemvalue="Cucumber Java.Scenario: Registering a new user &lt;firstName&gt; with valid data - @register, @... - Example n°1" />
         <item itemvalue="JUnit.JUnitTestRunner" />
       </list>
     </recent_temporary>
@@ -87,5 +160,28 @@
       <updated>1755363093599</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="&quot;Cucumber+&quot;!=null" />
+          <url>file://$PROJECT_DIR$/src/test/java/parallel/AccountsPageSteps.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="&quot;Cucumber+&quot;!=null" />
+          <url>file://$PROJECT_DIR$/src/test/java/parallel/AccountsPageSteps.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
+          <url>file://$PROJECT_DIR$/src/test/resources/parallel/AccountsPage.feature</url>
+          <line>5</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

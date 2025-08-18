@@ -4,7 +4,7 @@ Feature: User Registration
     Given the user navigates to the registration page
 
   @regression @register
-  Scenario Template: Registering a new user with valid data
+  Scenario Template: Registering a new user <firstName> with valid data
     When the user enters "<firstName>","<lastName>","<telephone>","<password>" and subscribes "<subscribe>"
     Then the user registration should be successful
 

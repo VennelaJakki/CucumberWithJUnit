@@ -1,4 +1,4 @@
-package steps;
+package parallel;
 
 import com.qa.opencart.pages.LoginPage;
 import com.qa.opencart.pages.RegisterPage;

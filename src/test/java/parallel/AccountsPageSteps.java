@@ -1,4 +1,4 @@
-package steps;
+package parallel;
 
 import com.qa.opencart.pages.AccountsPage;
 import com.qa.opencart.pages.LoginPage;
@@ -11,6 +11,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import utils.ScenarioContext;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class AccountsPageSteps{
@@ -20,6 +21,7 @@ public class AccountsPageSteps{
     private ProductInfoPage productInfoPage;
     private ScenarioContext scenarioContext;
     private Hooks hooks;
+    private List<String> headers;
 
 
     public AccountsPageSteps(Hooks hooks,ScenarioContext scenarioContext){
@@ -35,14 +37,12 @@ public class AccountsPageSteps{
 
     @When("the user checks the page headers")
     public void the_user_checks_the_page_headers(){
-        List<String> pageHeaders=accPage.getAccPageHeaders();
-        scenarioContext.setContext("ACC_PAGE_HEADERS",pageHeaders);
+        headers=accPage.getAccPageHeaders();
     }
 
     @Then("the page headers should be:")
-    public void the_page_headers_should_be(DataTable headers){
-        Assert.assertEquals(headers.asList(),List.of(scenarioContext.getContext("ACC_PAGE_HEADERS")));
-
+    public void the_page_headers_should_be(DataTable expHeaders){
+        Assert.assertEquals(expHeaders.asList(String.class),headers );
     }
 
     @When("the user searches for {string}")

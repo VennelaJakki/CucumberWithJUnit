@@ -11,7 +11,7 @@ pipeline {
 
     stages {
         stage('Build') {
-            steps {
+            parallel {
                 git 'https://github.com/jglick/simple-maven-project-with-tests.git'
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
@@ -32,7 +32,7 @@ pipeline {
             when {
                 expression { currentBuild.result == null || currentBuild.result == 'SUCCESS' }
             }
-            steps {
+            parallel {
                 echo "deploy to Dev"
             }
             post {
@@ -48,7 +48,7 @@ pipeline {
             when {
                 expression { currentBuild.result == null || currentBuild.result == 'SUCCESS' }
             }
-            steps {
+            parallel {
                 echo "deploy to qa"
             }
             post {
@@ -64,7 +64,7 @@ pipeline {
             when {
                 expression { currentBuild.result == null || currentBuild.result == 'SUCCESS' }
             }
-            steps {
+            parallel {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/naveenanimation20/Feb2024POMSeries.git'
                     sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/test_regression.xml"
@@ -80,7 +80,7 @@ pipeline {
         }
 
         stage('Publish Allure Reports') {
-            steps {
+            parallel {
                 script {
                     allure([
                         includeProperties: false,
@@ -94,7 +94,7 @@ pipeline {
         }
 
         stage('Publish Extent Report') {
-            steps {
+            parallel {
                 publishHTML([allowMissing: false,
                     alwaysLinkToLastBuild: false,
                     keepAll: true,
@@ -109,7 +109,7 @@ pipeline {
             when {
                 expression { currentBuild.result == null || currentBuild.result == 'SUCCESS' }
             }
-            steps {
+            parallel {
                 echo "deploy to Stage"
             }
             post {
@@ -125,7 +125,7 @@ pipeline {
             when {
                 expression { currentBuild.result == null || currentBuild.result == 'SUCCESS' }
             }
-            steps {
+            parallel {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/naveenanimation20/Feb2024POMSeries.git'
                     sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/test_sanity.xml"
@@ -147,7 +147,7 @@ pipeline {
             when {
                 expression { env.SANITY_TESTS_RAN == 'true' }
             }
-            steps {
+            parallel {
                 publishHTML([allowMissing: false,
                     alwaysLinkToLastBuild: false,
                     keepAll: true,

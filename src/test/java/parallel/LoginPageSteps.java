@@ -1,4 +1,4 @@
-package steps;
+package parallel;
 import com.qa.opencart.pages.AccountsPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

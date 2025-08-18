@@ -1,6 +1,6 @@
 Feature: Accounts Page
 
-  @accounts @regression @smoke
+  @accounts @regression @smoke @headers
   Scenario: Verify the headers on the accounts page
     Given the user is logged in and on the accounts page
     When the user checks the page headers
