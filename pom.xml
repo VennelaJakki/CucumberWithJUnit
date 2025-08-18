@@ -139,8 +139,9 @@
           <threadCount>4</threadCount>
           <perCoreThreadCount>false</perCoreThreadCount>
           <includes>
-            <include>**/*JUnitTestRunner.java</include>
-            <include>**/*RegisterTestRunner.java</include><!-- Or your specific runner class name -->
+            <include>**/*Test.java</include>
+            <!--include>**/*RegisterTest.java</include-->
+            <!--include>**/*SmokeTest.java</include--><!-- Or your specific runner class name -->
           </includes>
         </configuration>
       </plugin>

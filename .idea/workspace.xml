@@ -11,7 +11,10 @@
       <change afterPath="$PROJECT_DIR$/../Cucumber0825/.mvn/maven.config" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Cucumber0825/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/parallel/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/parallel/JUnitTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/SmokeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/parallel/RegisterTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/RegisterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +34,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Cucumber Java.Scenario: Check forgot password link existence.executor": "Run",
     "Cucumber Java.Scenario: Check login page title.executor": "Run",
     "Cucumber Java.Scenario: Registering a new user <firstName> with valid data - @register, @... - Example n°1.executor": "Run",
     "Cucumber Java.Scenario: Verify the headers on the accounts page.executor": "Debug",
@@ -53,7 +57,27 @@
       <recent name="steps" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Verify the headers on the accounts page">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Check forgot password link existence">
+    <configuration name="Scenario: Check forgot password link existence" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/parallel/LoginPage.feature" />
+      <option name="GLUE" value="parallel" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="CucumberWithJunit" />
+      <option name="NAME_FILTER" value="^Check forgot password link existence$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Check forgot password link existence$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Check forgot password link existence" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario: Check login page title" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/parallel/LoginPage.feature" />
@@ -114,7 +138,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JUnitTestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SmokeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CucumberWithJunit" />
       <extension name="coverage">
         <pattern>
@@ -122,8 +146,8 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="steps" />
-      <option name="MAIN_CLASS_NAME" value="parallel.JUnitTestRunner" />
+      <option name="PACKAGE_NAME" value="parallel" />
+      <option name="MAIN_CLASS_NAME" value="parallel.SmokeTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,10 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Check forgot password link existence" />
         <item itemvalue="Cucumber Java.Scenario: Verify the headers on the accounts page" />
         <item itemvalue="Cucumber Java.Scenario: Check login page title" />
         <item itemvalue="Cucumber Java.Scenario: Registering a new user &lt;firstName&gt; with valid data - @register, @... - Example n°1" />
-        <item itemvalue="JUnit.JUnitTestRunner" />
+        <item itemvalue="JUnit.SmokeTest" />
       </list>
     </recent_temporary>
   </component>

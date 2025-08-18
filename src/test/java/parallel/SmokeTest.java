@@ -4,11 +4,12 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/parallel",
         glue = "parallel",
-        tags = "@register",
+        tags = "@smoke",
         plugin = {
                 "pretty",
                 "html:target/cucumber-report.html",
@@ -18,7 +19,7 @@ import org.junit.runner.RunWith;
         monochrome = true,
         dryRun = false
 )
-public class RegisterTestRunner {
+public class SmokeTest {
 
 
 }

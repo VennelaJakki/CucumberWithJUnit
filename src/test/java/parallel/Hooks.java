@@ -2,10 +2,7 @@ package parallel;
 
 import com.qa.opencart.factory.DriverFactory;
 import com.qa.opencart.pages.LoginPage;
-import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
+import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -32,6 +29,13 @@ public class Hooks {
 
         driver = df.initDriver(prop);
         loginPage = new LoginPage(driver);
+        getThreadInfo();
+    }
+
+    private static void getThreadInfo(){
+        Thread currentThread = Thread.currentThread();
+        System.out.println("Current Thread Name: " + currentThread.getName());
+        System.out.println("Current Thread ID: " + currentThread.getId());
     }
     @AfterStep
     public void takeScreenshot(Scenario scenario){
