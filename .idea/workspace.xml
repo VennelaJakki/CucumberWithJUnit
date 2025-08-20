@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81f04b11-600d-4854-8642-89c7b4ad9fcb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Cucumber0825/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cucumber0825/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cucumber0825/.mvn/jvm.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cucumber0825/.mvn/maven.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cucumber0825/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/parallel/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/parallel/JUnitTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/SmokeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/parallel/RegisterTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/RegisterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/parallel/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/RegisterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/parallel/SmokeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parallel/SmokeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,21 +25,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Scenario: Check forgot password link existence.executor": "Run",
-    "Cucumber Java.Scenario: Check login page title.executor": "Run",
-    "Cucumber Java.Scenario: Registering a new user <firstName> with valid data - @register, @... - Example n°1.executor": "Run",
-    "Cucumber Java.Scenario: Verify the headers on the accounts page.executor": "Debug",
-    "JUnit.JUnitTestRunner.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Vennela Priyanka/Desktop/CucumberWithJunit/src/test"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Scenario: Check forgot password link existence.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Check login page title.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Registering a new user &lt;firstName&gt; with valid data - @register, @... - Example n°1.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify the headers on the accounts page.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.JUnitTestRunner.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Vennela Priyanka/Desktop/CucumberWithJunit/src/test&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Vennela Priyanka\Desktop\CucumberWithJunit\src\test" />
